@@ -1,0 +1,144 @@
+/*2. Dodaj CSS
+Styl ogólny dla strony: Ustaw czcionkę, marginesy i padding oraz kolor tła (body).
+Dodaj gradient tła dla sekcji głównej (main).
+Styl dla nagłówka: Ustaw tło, padding, kolor tekstu, cieniowanie i animację pojawiania się (header).
+Styl dla głównej zawartości: Ustaw maksymalną szerokość, margines, padding, tło i cieniowanie dla sekcji głównej
+(main).
+Styl dla sekcji mediów
+Ustaw kontener na media (.media-container) jako elastyczny z możliwością zawijania
+elementów (flex).
+Styl dla sekcji wideo
+Ustaw kontener na wideo (.video-section) jako elastyczny z kolumnowym układem i
+odstępami między elementami (gap).
+Elementy wideo (.video-item) z tłem, zaokrąglonymi rogami, cieniowaniem i paddingiem.
+Ustaw szerokość i styl wideo (.video-item video).
+Styl dla sekcji audio
+Ustaw kontener na audio (.audio-section) jako elastyczny z kolumnowym układem i
+odstępami między elementami (gap).*/
+
+body{
+    font-family: 'Courier New', Courier, monospace;
+    margin:0.5%;
+    padding:0.5%;
+}
+
+body main{
+    background: radial-gradient(gray 20%, white 80%);
+}
+
+header{
+    background-color: dodgerblue;
+    padding:20px;
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    animation:wejscie 0.4s;
+    color: white;
+    text-shadow: 2px 2px 2px black;
+}
+
+@keyframes wejscie{
+    from{opacity:0}
+    to{opacity:1}
+}
+
+main{
+    width:100%;
+    height:700px;
+    margin-top: 20px;
+    background-color: lightgray;
+    box-shadow: 0px 0px 10px 10px black;
+}
+
+footer{
+    background-color: gray;
+    color:white;
+    margin-top: 20px;
+    padding-top:10px;
+    padding-bottom: 10px;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+}
+
+.media-section{
+    width:100%;
+    height:100%;
+}
+.media-container{
+    width:100%;
+    height:100%;
+}
+
+.video-section{
+    width: 50%;
+    height: 100%;
+    position: relative;
+    float: left;
+    display: grid;
+    place-items: center;
+}   
+
+.video-item{
+    background-color: aqua;
+    border: 1px solid aqua;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 5%;
+}
+
+video{
+    height: 200px;
+    width: 533px;
+}
+
+.video-item:hover{
+    animation: powiekszenie 0.4s;
+    transform: scale(1.25);
+}
+@keyframes powiekszenie{
+    from{transform:  scale(1);}
+      to{transform: scale(1.25);}
+}
+
+.audio-section{
+    width:50%;
+    height: 100%;
+    position: relative;
+    float: right;
+    display: grid;
+    place-items: center;
+}   
+
+.audio-player{
+    background-color: aqua;
+    border: 1px solid aqua;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 5%;
+    width: fit-content;
+}
+
+audio{
+    text-justify: center;
+}
+
+/*
+
+Publikowanie strony internetowej
+
+Serwer i protokoły internetowe
+- host (localhost, xampp)
+- hosting
+- serwer dedykowany
+- kolokacja
+- protokół FTP
+- protokół SSH
+- menedżer plików
+    - Total commander
+    - FileZilla
+    - OpenSSH
+- domena
+
+*/
